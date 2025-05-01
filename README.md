@@ -7,12 +7,12 @@ A Python implementation of a vending machine using the State design pattern to m
 This project demonstrates how to use the State design pattern to model a vending machine's behavior based on its current state. Each state determines how the machine responds to user actions like inserting coins, selecting items, and dispensing items.
 
 ## 🏗️ State Diagram
-[NoCoin] --insert_coin--> [HasCoin]
-[HasCoin] --select_item--> [Dispensing] (if items available)
-[HasCoin] --select_item--> [SoldOut] (if no items)
-[Dispensing] --dispense_item--> [NoCoin] (if items remain)
-[Dispensing] --dispense_item--> [SoldOut] (if last item)
-[SoldOut] --refill--> [NoCoin]
+- [NoCoin] --insert_coin--> [HasCoin]
+- [HasCoin] --select_item--> [Dispensing] (if items available)
+- [HasCoin] --select_item--> [SoldOut] (if no items)
+- [Dispensing] --dispense_item--> [NoCoin] (if items remain)
+- [Dispensing] --dispense_item--> [SoldOut] (if last item)
+- [SoldOut] --refill--> [NoCoin]
 
 
 ## 🛠️ Implementation Details
